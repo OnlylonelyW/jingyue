@@ -1,0 +1,731 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="content-type" charset="UTF-8" content="text/html">
+		<title>laing</title>
+		<meta name="discription"  content="">
+		<meta name="keywords" content="">
+		<style type="text/css">
+			*{margin:0px;padding:0px;}
+			body{font-size:12px; font-family:"微软雅黑";}
+			a{text-decoration:none; color:black;}
+			ul li{list-style:none;}
+			.fl{float:left;}
+			.fr{float:right;}
+			.clear:after{content:""; display:block; clear:both;}
+			input{border:none;}
+			.main{width:1000px; margin:0 auto;}
+			em{font-style:normal;}
+
+			/*header start*/
+			#wrap .header .header_1{background:#FFF; padding:2px 0 1px;}
+			#wrap .header .header_1 .h1_l{width:260px; margin-top:18px;}
+			/* #wrap .header .header_1 .h1_r{width:240px;} */
+			#wrap .header .header_1 .h1_r .h1_r_top{text-align:right; line-height:30px; padding-right:34px;}
+			#wrap .header .header_1 .h1_r form .txt{width:180px; border:1px solid #999; text-align:right; padding:8px 9px; vertical-align:bottom; font-size:13px}
+			#wrap .header .header_1 .h1_r form .txt:hover{width:233px;}
+			#wrap .header .header_1 .h1_r form .sub{width:35px; height:30px; background:url('images/hpftn.png') no-repeat -307px -370px; vertical-align:bottom;}
+			#wrap .header .header_2{height:50px; background:black;}
+			#wrap .header .header_2 ul li{line-height:50px; width:92px; border-right:1px solid #fff; text-align:center; font-size:15px; position:relative;}
+			#wrap .header .header_2 ul li.list_last{width:160px; border:none;}
+			#wrap .header .header_2 ul li a{color:#fff;}
+			#wrap .header .header_2 ul li .h2_p2{position:absolute;top:0; left:0; display:none; width:100%;}
+			#wrap .header .header_2 ul li:hover .h2_p2{display:block; background:red;}
+			/*header end*/
+			
+			/*body start*/
+			#wrap .body .body_1{height:530px;}
+			/*body end*/
+			#wrap .body .body_1 .b1_l{width:690px; height:510px; padding-top:10px; position:relative;}
+			#wrap .body .body_1 .b1_l .em1{background:url('images/plus.png') no-repeat; width:31px; height:31px; position:absolute; bottom:182px; right:30px;}
+			#wrap .body .body_1 .b1_l .b1_1_bottom{border-bottom:1px solid #CCC; height:58px; border-top:1px solid #CCC; margin-top:15px; text-align:center;}
+
+			#wrap .body .body_1 .b1_l .b1_1_bottom .btn{display:inline-block; width:19px; height:58px; background:url('images/hpftn.png') no-repeat 0px 0px; vertical-align:middle; border-left: 1px solid #CCC; border-right: 1px solid #CCC;}
+			#wrap .body .body_1 .b1_l .b1_1_bottom .btn:hover{background-position:-40px 0;}
+			#wrap .body .body_1 .b1_l .b1_1_bottom .btn2{background-position:-20px 0;}
+			#wrap .body .body_1 .b1_l .b1_1_bottom .btn2:hover{background-position:-60px 0;}
+			#wrap .body .body_1 .b1_l .b1_1_bottom ul{display:inline-block; padding:0 35px; vertical-align:middle;}
+			#wrap .body .body_1 .b1_l .b1_1_bottom ul li{opacity:0.45; width:60px; height:38px; float:left;}
+			#wrap .body .body_1 .b1_l .b1_1_bottom ul li:hover{opacity:1;}
+			#wrap .body .body_1 .b1_l .b1_1_bottom ul li a{display:block; height:100%;}
+			#wrap .body .body_1 .b1_l .b1_1_bottom ul .li_1{background:url('images/bg_1.jpg') no-repeat; opacity:1;}
+			#wrap .body .body_1 .b1_l .b1_1_bottom ul .li_2{background:url('images/bg_2.jpg') no-repeat;}
+			#wrap .body .body_1 .b1_l .b1_1_bottom ul .li_3{background:url('images/bg_3.jpg') no-repeat;}
+			#wrap .body .body_1 .b1_l .b1_1_bottom ul .li_4{background:url('images/bg_4.jpg') no-repeat;}
+			#wrap .body .body_1 .b1_l .b1_1_bottom ul .li_5{background:url('images/bg_5.jpg') no-repeat;}
+			#wrap .body .body_1 .b1_2{height:510px; width:300px; padding:10px 0 10px 10px;}
+			#wrap .body .body_1 .b1_2 .b1_2_img{margin-top:10px;}
+
+			#wrap .body .body_2{padding-top:40px;}
+			#wrap .body .body_2 .b2_top{height:45px; background:url('images/hpftn.png') no-repeat 0 -81px; margin-bottom:35px; border-bottom:1px solid black;}
+			#wrap .body .body_2 .b2_r{width:329px; height:335px; border:4px solid #000; border-right:none; border-bottom:1px solid #000;}
+			#wrap .body .body_2 .b2_r .b2_dl{margin:28px 20px 0 28px; background:white;}
+			#wrap .body .body_2 .b2_r .b2_dl .b2_dt{border-bottom:1px solid #333; margin-bottom:8px;}
+			#wrap .body .body_2 .b2_r .b2_dl .b2_dt .txt{color:red;}
+			#wrap .body .body_2 .b2_r .b2_dl .b2_dt h2{font-size:24px;  margin-top:16px; font-weight:normal; padding:0 0 10px 10px;}
+			#wrap .body .body_2 .b2_r .b2_dl .b2_dd{padding:12px;}
+			#wrap .body .body_2 .b2_r .b2_dl .b2_dd span{color:red;}
+			#wrap .body .body_2 .b2_r .b2_dl .b2_dd p{color:#999; margin-top:20px;}
+			#wrap .body .body_2 .b2_r .b2_dl .b2_dd .dd_a{color:#999;}
+			#wrap .body .body_2 .b2_r .b2_dl .b2_dd .dd_first{font-size:15px;}
+			#wrap .body .body_2 .b2_r .b2_dl .b2_dd .dd_a:hover{background:red;}
+			#wrap .body .body_2 .b2_l{width:667px; height:340px;}
+			#wrap .body .body_2 .b2_l .li_1{float:left; margin-right:14px;}
+			#wrap .body .body_2 .b2_l .li_last{margin-left:0;}
+		</style>
+	</head>
+<body style="height:4000px;">
+	<div id="wrap">
+		<!--header start-->
+		<div class="header">
+			<div class="header_1 main clear">
+				<div class="h1_l fl">
+						<img src="images/logo.png" width="166" height="46" alt="嘉人网">
+				</div>
+				<div class="h1_r fr">
+					<div class="h1_r_top">
+						<a href="">登录</a>
+						<a href="">注册</a>
+					</div>
+					<form>
+						<input type="text" class="txt" placeholder="搜索你感兴趣的内容">
+						<input type="submit" value="" class="sub">
+					</form>
+				</div>
+			</div>
+			<div class="header_2">
+				<ul class="main">
+					<li class="fl">
+						<a href="">
+							<span class="h2_p1">首页</span>
+							<span class="h2_p2">HOME</span>
+						</a>
+					</li>
+					<li class="fl">
+						<a href="">
+							<span class="h2_p1">时装趋势</span>
+							<span class="h2_p2">FASHION</span>
+						</a>
+					</li>
+					<li class="fl">
+						<a href="">
+							<span class="h2_p1">嘉人美妆</span>
+							<span class="h2_p2">BEAUTY</span>
+						</a>
+					</li>
+					<li class="fl">
+						<a href="">
+							<span class="h2_p1">嘉人观点</span>
+							<span class="h2_p2">VIEW</span>
+						</a>
+					</li>
+					<li class="fl">
+						<a href="">
+							<span class="h2_p1">珠宝腕表</span>
+							<span class="h2_p2">LUXURY</span>
+						</a>
+					</li>
+					<li class="fl">
+						<a href="">
+							<span class="h2_p1">生活</span>
+							<span class="h2_p2">LIFE</span>
+						</a>
+					</li>
+					<li class="fl">
+						<a href="">
+							<span class="h2_p1">杂志</span>
+							<span class="h2_p2">MAGEZINE</span>
+						</a>
+					</li>
+					<li class="fl">
+						<a href="">
+							<span class="h2_p1">专题</span>
+							<span class="h2_p2">FEATURE</span>
+						</a>
+					</li>
+					<li class="fl">
+						<a href="">
+							<span class="h2_p1">嘉人SHOW</span>
+							<span class="h2_p2">SHOW</span>
+						</a>
+					</li>
+					<li class="fl list_last">
+						<a href="">
+							<span class="h2_p1">嘉人美妆精英学院</span>
+							<span class="h2_p2">BEAUTYELITE</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+				
+		</div>
+		<!--header end-->
+
+		<!--body start-->
+		<div class="body">
+			<div class="body_1 main clear">
+				<div class="b1_l fl">
+					<a href="">
+						<img src="images/1.jpg" width="690" height="434" alt="美女">
+					</a>
+					<em class="em1"></em>
+					<div class="b1_1_bottom">
+						<a href="" class="btn"></a>
+						<ul class="clear">
+							<li class="li_1">
+								<a href=""></a>
+							</li>
+							<li class="li_2">
+								<a href=""></a>
+							</li>
+							<li class="li_3">
+								<a href=""></a>
+							</li>
+							<li class="li_4">
+								<a href=""></a>
+							</li>
+							<li class="li_5">
+								<a href=""></a>
+							</li>
+						</ul>
+						<a href="" class="btn btn2"></a>
+					</div>
+				</div>
+				<div class="b1_2 fr">
+					<img src="images/2.jpg" width="300" height="250" alt="美女">
+					<img src="images/3.jpg" width="300" height="250" alt="美女" class="b1_2_img">
+				</div>
+			</div>
+			<div class="body_2 main clear">
+				<div class="b2_top"></div>
+				<div class="b2_r fl">
+					<dl class="b2_dl">
+						<dt class="b2_dt">
+							<a href="" class="txt">[美妆头条]</a>
+							<h2>
+								<a href="">这5个貌美高性价比的小众牌 穿上就成焦点<a>
+							</h2>
+						</dt>
+						<dd class="b2_dd">
+							<a href="" class="dd_first">2016年有不少精彩电影，现在已跨入2017年，又有哪些值得我们期待的好作品呢？下面推荐一些本年度话题度和精彩度俱佳的好电影，新一年就用好看的新作品来增添些生活情趣吧。</a>
+							<span>[+]</span>
+							<p>标签 : 
+								<a href="" class="dd_a">电影</a>
+								<a href="" class="dd_a">2017年</a>
+								<a href="" class="dd_a">清单</a>
+							</p>
+						</dd>
+					</dl>
+				</div>
+				<div class="b2_l fr">
+					<ul>
+						<li class="li_1">
+							<a href="">
+								<img src="images/4.jpg" height="340" width="213" alt="美女">
+							</a>
+						</li>
+						<li class="li_1">
+							<a href="">
+								<img src="images/5.png" height="340" width="213" alt="美女">
+							</a>
+						</li>
+						<li class="li_last">
+							<a href="">
+								<img src="images/6.jpg" height="340" width="213" alt="美女">
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+	
+	<style type="text/css">
+		#wrap .body_3{background:#EBEAEA; padding:40px 0; margin-top:45px;}
+		#wrap .body_3 .b3{padding:40px 0;}
+		#wrap .body_3 .b3 .b3_left{width:700px; padding-top:10px; border-bottom:1px solid #999;}
+		#wrap .body_3 .b3 .b3_left .b3_l_1{background: #EBEAEA url(images/hpftn.png) no-repeat 0px -128px; width:100%; height:43px; border-bottom:1px solid #000;}
+		#wrap .body_3 .b3 .b3_left .b3_l_2{height:44px; padding:2px; border:1px solid black;}
+		#wrap .body_3 .b3 .b3_left .b3_l_2 ul li{float:left; line-height:44px; text-align:center; font-size:14px;}
+		#wrap .body_3 .b3 .b3_left .b3_l_2 ul li .a1{border-right:1px solid #000; word-spacing:0.5em; padding:0 0.5em;}
+		#wrap .body_3 .b3 .b3_left .b3_l_2 ul li .a2{border:none; padding-left:10px;}
+		#wrap .body_3 .b3 .b3_left .b3_l_2 ul li .a1:hover{color:red;}
+		#wrap .body_3 .b3 .b3_left .b3_l_3{position:relative;}
+		#wrap .body_3 .b3 .b3_left .b3_l_3 .b3_sp{width:30px; height:60px; background:url('images/hpbgw.png') no-repeat 0px 0px; position:absolute;}
+		#wrap .body_3 .b3 .b3_left .b3_l_3 .b3_sp1{background-position:-190px -232px; top:50%; left:0;}
+		#wrap .body_3 .b3 .b3_left .b3_l_3 .b3_sp1:hover{background-position:-190px -168px;}
+		#wrap .body_3 .b3 .b3_left .b3_l_3 .b3_sp2{background-position:-223px -232px; top:50%; right:0;}
+		#wrap .body_3 .b3 .b3_left .b3_l_3 .b3_sp2:hover{background-position:-223px -168px}
+		#wrap .body_3 .b3 .b3_left .b3_l_4{margin-top:27px;}
+		#wrap .body_3 .b3 .b3_left .b3_l_4 .b3_em1{padding:1px 28px 1px 10px; font-size:17px; border:1px solid #C50C11; background:url('images/1.gif') no-repeat right center; margin-top:2px;}
+		#wrap .body_3 .b3 .b3_left .b3_l_4 .b3_em1 a:hover{color:#C50C11;}
+		#wrap .body_3 .b3 .b3_left .b3_l_4 strong{font-weight:normal; font-size:24px; display:block; }
+		#wrap .body_3 .b3 .b3_left .b3_l_4 p{font-size:15px; padding:20px 0;}
+		#wrap .body_3 .b3 .b3_right{width: 276px; margin: 10px 0 0 22px; padding: 18px 0 0; background:white; border:1px solid #999;}
+		#wrap .body_3 .b3 .b3_right .b3_h a{display:block; height:58px; background:url('images/hpftn.png') white -107px 0px no-repeat;}
+		#wrap .body_3 .b3 .b3_right .b3_img1{position:relative;}
+		#wrap .body_3 .b3 .b3_right .b3_img1 .img1{display:block;}
+		#wrap .body_3 .b3 .b3_right .b3_img1 .b3_sp3{background:url('images/mc_hbgi.png')no-repeat -155px 0px; position:absolute; bottom:0; left:0; width:100%; text-align:center; font-size:18px; padding:8px 0;}
+		#wrap .body_3 .b3 .b3_right .b3_img1 .b3_sp3 a{color:white;}
+		#wrap .body_3 .b3 .b3_right .b3_foot{height:242px; padding-top:13px; font-size:14px;}
+		#wrap .body_3 .b3 .b3_right .b3_foot .b3_f_h .b3_f_a{height:40px; background: url('images/hpftn.png') 10px -172px; display:block;}
+		#wrap .body_3 .b3 .b3_right .b3_foot ul li{width:50%; padding-top:8px; text-align:center; position:relative;}
+		#wrap .body_3 .b3 .b3_right .b3_foot ul li a:hover{color:red;}
+		#wrap .body_3 .b3 .b3_right .b3_foot ul li .f1_sp1{position:absolute; width:120px; bottom:-11px; left:10px; text-align:center;}
+		#wrap .body_3 .b3 .b3_right .b3_foot ul li .f1_sp1 .f1_sp2{color:red;}
+		#wrap .body_4{padding:30px;}
+		#wrap .body_4 .b4_hd{text-align:center;}
+		#wrap .body_5 .b5_l{width:680px; padding-top:10px;}
+		#wrap .body_5 .b5_l .b5_l_h1{margin:0 10px 32px; height:40px; position:relative; border-bottom:1px solid #000;}
+		#wrap .body_5 .b5_l .b5_l_h1 .b5_l_a1{display:block; background:url('images/hpftn.png') no-repeat 0px -444px; width:50%; height:100%;}
+		#wrap .body_5 .b5_l .b5_l_h1 .b5_l_a1:hover{background-position:0px -482px;;}
+		#wrap .body_5 .b5_l .b5_l_h1 .b5_l_sp1{position:absolute;top:10px; right:10px;}
+		#wrap .body_5 .b5_l .b5_l_h1 .b5_l_sp1 a:hover{color:red;}
+		#wrap .body_5 .b5_l	.b5_con1{width:670;padding-left:10px; margin-right:10px; position:relative; margin-bottom:20px;}
+		#wrap .body_5 .b5_l	.b5_con1 .con1_a1 .con1_p1{text-align:center; position:absolute; bottom:0; left:12px; width:655px; background:rgba(0,0,0,0.5);color:#fff; font-size:18px;line-height:40px;}
+		#wrap .body_5 .b5_l	.b5_con1 .con1_a1 img{display:block;}
+		#wrap .body_5 .b5_l	.b5_con2 li{width:320px; margin:0 10px; text-align:center; float:left; position:relative;}
+		#wrap .body_5 .b5_l	.b5_con2 li img{display:block;}
+		#wrap .body_5 .b5_l	.b5_con2 li.con_l1{margin-top:20px;}
+		#wrap .body_5 .b5_l	.b5_con2 li .con2_sp{position:absolute; bottom:0; left:0; width:100%; background:rgba(0,0,0,0.5); color:#fff; font-size:18px; line-height:40px;}
+		#wrap .body_5 .b5_r{width:298px; height:450px ;padding:10px;}
+		#wrap .body_5 .b5_r .b5_r_hd{height:870px; border:1px solid #000;}
+		#wrap .body_5 .b5_r .b5_r_hd .hd1{margin:0 auto;  width:260px; height:870px;}
+		#wrap .body_5 .b5_r .b5_r_hd .hd1 .hd1_1{position:relative; padding-top:20px; font-size:22px;}
+		#wrap .body_5 .b5_r .b5_r_hd .hd1 .hd1_1 .hd1_1_a3{position:absolute; width:34px; height:40px; background:black; color:white; font-size:24px; text-align:center; padding-top:5px; line-height:20px; top:0; right:0;}
+		#wrap .body_5 .b5_r .b5_r_hd .hd1 .hd1_1 .hd1_1_a1{border-right:1px solid #000;}
+		#wrap .body_5 .b5_r .b5_r_hd .hd1 .hd1_1 .hd1_1_a2{color:#999; font-size:18px; margin-left:5px;}
+		#wrap .body_5 .b5_r .b5_r_hd .hd1 .hd1_1 .a1:hover{color:red;}
+		#wrap .body_5 .b5_r .b5_r_hd .hd1 .hd1_1 .hd1_1_a3 p{font-size:10px;}
+		#wrap .body_5 .b5_r .b5_r_hd .hd1 .hd1_2{display:block; width:74px; height:30px; margin-top:15px; background:url("images/hpftn.png")no-repeat;}
+		#wrap .body_5 .b5_r .b5_r_hd .hd1 .prev{background-position:-265px -980px;}
+		#wrap .body_5 .b5_r .b5_r_hd .hd1 .prev:hover{background-position:-265px -1011px;}
+		#wrap .body_5 .b5_r .b5_r_hd .hd1 .next:hover{background-position:-265px -1073px;}
+		#wrap .body_5 .b5_r .b5_r_hd .hd1 .next{background-position:-265px -1042px;}
+		#wrap .body_5 .b5_r .b5_r_hd .hd2{height:300px; margin-top:20px;}
+		#wrap .body_5 .b5_r .b5_r_hd .hd2 .hd2_dt strong{font-weight:normal; font-size:22px; display:block; padding:10px 0;}
+		#wrap .body_5 .b5_r .b5_r_hd .hd2 .hd2_dt strong .hd2_a1:hover{color:red;}
+		#wrap .body_5 .b5_r .b5_r_hd .hd2 .hd2_dd{margin-top:2px;}
+		#wrap .body_6{}
+		#wrap .body_6 .b6_l{width: 680px; padding-top: 10px;}
+		#wrap .body_6 .b6_l .b6_l_hd{border-bottom: 1px solid #000; margin: 0 10px 32px; height:40px; position:relative;}
+		#wrap .body_6 .b6_l .b6_l_hd .l_a1{display:block; width:50%; height:100%; background: url('images/hpftn.png') no-repeat 0px -444px;}
+		#wrap .body_6 .b6_l .b6_l_hd .l_sp1{position:absolute; top:14px; right:2px;}
+		#wrap .body_6 .b6_l .b6_l_l{width:320px; padding-left:10px; position:relative;}
+		#wrap .body_6 .b6_l .b6_l_l .l_l_a1 img{display:block;}
+		#wrap .body_6 .b6_l .b6_l_l .l_l_a1 .l_l_sp1{position:absolute; bottom:0px; left:0px; background:rgba(0,0,0,0.5); text-align:center; font-size:18px;
+		margin-left: 10px; width:300px; line-height:40px; color:white;}
+		#wrap .body_6 .b6_l .b6_l_l .next{width:25px;height:60px;background:url("images/hpbgw.png")no-repeat; position:absolute;}
+		#wrap .body_6 .b6_l .b6_l_l .left{top:50%; left:10px; background-position:-303px -452px;}
+		#wrap .body_6 .b6_l .b6_l_l .left:hover{background-position:-303px -389px;}
+		#wrap .body_6 .b6_l .b6_l_l .right{background-position:-336px -450px; top:50%; right:20px;}
+		#wrap .body_6 .b6_l .b6_l_l .right:hover{background-position:-336px -389px;}
+		#wrap .body_6 .b6_l .b6_l_r{margin-left:28px; width:302px; height:200px;background:blue;}
+		#wrap .body_6 .b6_l .b6_l_r .l_r_ul .l_r_li{width:150px; height:200px; margin:0 1px 1px 0; position:relative;}
+		#wrap .body_6 .b6_l .b6_l_r .l_r_ul .l_r_li em{width:100%; position:absolute; right:0; bottom:0; font-size:16px; color:white; text-indent:8px; display:none;}
+		#wrap .body_6 .b6_l .b6_l_r .l_r_ul .l_r_li .l_r_a1{position:absolute; height:100%; width:100%; top:0; left:0; display:none; background:rgba(0,0,0,0.5);}
+		#wrap .body_6 .b6_l .b6_l_r .l_r_ul .l_r_li:hover .l_r_a1{display:block;}
+		#wrap .body_6 .b6_l .b6_l_r .l_r_ul .l_r_li:hover em{display:block;}
+		#wrap .body_6 .b6_l .b6_l_r .l_r_ul .l_r_li .icon{position:absolute; bottom:10px; right:10px; width:20px; height:20px; background:url('images/mc_hbgi.png')no-repeat 0px -80px;}
+		#wrap .body_6 .b6_l .b6_l_r .l_r_ul .l_r_li:hover .icon{background-position: 0px -48px;}
+		#wrap .body_6 .b6_l .b6_l_bt{margin-top:10px; width:302px; height:190px; position:relative;}
+		#wrap .body_6 .b6_l .b6_l_bt .l_r_a1{position:absolute; height:100%; width:100%; top:0; left:0; display:none; background:rgba(0,0,0,0.5);}
+		#wrap .body_6 .b6_l .b6_l_bt:hover .l_r_a1{display:block;} 
+		#wrap .body_6 .b6_l .b6_l_bt em{width:100%; position:absolute; right:0; bottom:0; font-size:16px; color:white; text-indent:8px; display:none;}
+		#wrap .body_6 .b6_l .b6_l_bt:hover em{display:block;}
+		#wrap .body_6 .b6_l .b6_l_bt .icon{position:absolute; bottom:10px; right:10px; width:20px; height:20px; background:url('images/mc_hbgi.png')no-repeat 0px -80px;}
+		#wrap .body_6 .b6_l .b6_l_bt:hover .icon{background-position: 0px -48px;}
+		#wrap .body_6 .b6_l .b6_l_bb{height:80px; font-size:16px; padding-top:9px; clear:both;}
+		#wrap .body_6 .b6_l .b6_l_bb li{width:300px;  height:24px; padding:8px 10px;}
+		#wrap .body_6 .b6_l .b6_l_bb .bb_li{margin-left:55px; width:280px;}
+		#wrap .body_6 .b6_l .b6_l_bb li:hover{background: #F7F7F7;}
+		#wrap .body_6 .b6_r{padding:10px; width:300px; background:yellow;}
+		#wrap .body_6 .b6_r .b6_r_t{height:250px}
+		#wrap .body_6 .b6_r .b6_r_t .bt_sp{height:47px; width:150px; background: #E0E0E0 url('images/hpbgw.png')}
+		#wrap .body_6 .b6_r .b6_r_t .bt_t{width:300px; height:200px; clear:both; position:relative;}
+		#wrap .body_6 .b6_r .b6_r_t .bt_t .bt_t_a{width:280px; padding:10px; background: rgba(255,255,255,0.6); position:absolute; bottom:0; left:0; font-size:16px; }
+		#wrap .body_6 .b6_r .b6_r_t .bt_t .bt_t_a:hover{color:red;}
+		#wrap .body_6 .b6_r .b6_r_t .bt_t .bt_t_a .bt_t_sp{display:block; width:100%; text-align:right; color:red;font-size:10px; }
+		#wrap .body_6 .b6_r .b6_r_b .b_con1{background: url('images/hpftn.png') #fff no-repeat 98px -365px; height:40px; margin:20px 10px 10px;}
+		#wrap .body_6 .b6_r .b6_r_b dl{position:relative;}
+		#wrap .body_6 .b6_r .b6_r_b dl dt{width:28px; font-family:italic; font-size:14px;}
+		#wrap .body_6 .b6_r .b6_r_b dl dt.first{background: url('images/mc_hbgi.png') -105px -45px; height:45px; z-index:9; position:absolute;}
+		#wrap .body_6 .b6_r .b6_r_b dl dd.first{position:relative; height:150px; z-index:1;}
+		#wrap .body_6 .b6_r .b6_r_b dl dd.first img{float:left;}
+		#wrap .body_6 .b6_r .b6_r_b dl dd.first a{font-size:16px;}
+		#wrap .body_6 .b6_r .b6_r_b dl dd.first a:hover{color:red;}
+		#wrap .body_6 .b6_r .b6_r_b dl dt.else{padding-left: 10px; float:left; line-height:39px;}
+		#wrap .body_6 .b6_r .b6_r_b dl dd.else{line-height:39px; border-top:1px dotted #B0B0B0; font-size:16px;}
+		#wrap .body_6 .b6_r .b6_r_b dl dd.else:hover{color:red;}
+		#wrap .footer{border-top:1px solid #000;width:100%;}
+		#wrap .footer .foot{padding:60px 0 40px;}
+		#wrap .footer .foot .f_img{height:376px; position:relative; overflow:hidden;}
+		#wrap .footer .foot .f_img a{position:absolute; bottom:-3px;}
+		#wrap .footer .foot .f_img .a1{left:80px;}
+		#wrap .footer .foot .f_img .a2{left:168px; z-index:3;}
+		#wrap .footer .foot .f_img .a3{left:356px;z-index:2; box-shadow: 3px 9px 10px rgba(0,0,0,.4);}
+		#wrap .footer .foot .f_img .a4{left:588px;}
+		#wrap .footer .foot .f_img .a5{right:100px; z-index:1;}
+		#wrap .footer .foot .f_mdl{border-top: 4px solid #C50C11;
+		 border-bottom: 1px solid #666; background:black; padding:15px 0;}
+		#wrap .footer .foot .f_mdl .mdl_main{background: url('images/hpftn.png') no-repeat -130px -890px; width:785px; margin:0 auto; padding-left:215px; font-size:14px; line-height:30px; color:white; word-spacing:0.4em;}
+		#wrap .footer .foot .f_mdl .mdl_main a{color:white;}
+		#wrap .footer .foot .f_bt{height: 103px;
+		background: url('images/hearstchina.png') no-repeat center bottom;}
+		#wrap .footer .foot .f_bb{font-size:14px; line-height:50px; text-align:center; word-spacing:1.5em; margin-top:30px;}
+		#wrap .footer .foot p{text-align:center; font-family: "Verdana";margin:16px;}
+		#wrap .footer .foot p a:hover{color:red;}
+	</style>
+			<div class="body_3">
+				<div class="b3 main clear">
+					<div class="b3_left fl">
+						<div class="b3_l_1">
+						</div>
+						<div class="b3_l_2">
+							<ul>
+								<li>
+									<a href="" class="a1">
+										嘉 人 Icon
+									</a>
+								</li>
+								<li>
+									<a href="" class="a1">
+										妆 腔 作 势
+									</a>
+								</li>
+								<li>
+									<a href="" class="a1">
+										星 期 衣
+									</a>
+								</li>
+								<li>
+									<a href="" class="a1">
+										什 么 值 得 买
+									</a>
+								</li>
+								<li>
+									<a href="" class="a1">
+										摩 登 实 验 室
+									</a>
+								</li>
+								<li>
+									<a href="" class="a1 a2">
+										嘉 人 美 妆 礼 盒
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="b3_l_3">
+							<img src="images/7.jpg" width="700" height="400" alt="美女">
+							<span class="b3_sp b3_sp1"></span>
+							<span class="b3_sp b3_sp2"></span>
+						</div>
+						<div class="b3_l_4">
+							<em class="b3_em1 fr"><a href="">时尚解毒 Vol.045</a></em>
+							<strong>时装周秀票每张都惊喜</strong>
+							<p>每年时装周最受瞩目的除了时装本身，就是设计师以及那些头排客了。但今年很多品牌不按常理出牌，也占据了不少话题度。所以说，现在的时装周除了常规看点以外，更有不少有新意有创意的看点，值得我们投入更多关注。例如，各家秀票</p>
+						</div>
+					</div>
+					<div class="b3_right fr">
+						<h3 class="b3_h">
+							<a href=""></a>
+						</h3>
+						<div class="b3_img1">
+							<img src="images/8.jpg" width="276" height="320" alt="美女" class="img1">
+							<span class="b3_sp3"><a href="">2017新年礼物指南</a></span>
+						</div>
+						<div class="b3_foot">
+							<h3 class="b3_f_h">
+								<a href="" class="b3_f_a"></a>
+							</h3>
+							<ul>
+								<li class="fl">
+									<a href="">
+										<img src="images/9.jpg" width="120" height="175" alt="mv">
+										<span class="f1_sp1">苏秘37°奇迹护理精华露<p class="f1_sp2">申请</p></span>
+									</a>
+
+								</li> 
+								<li class="fl">
+									<a href="">
+										<img src="images/10.jpg" width="120" height="175" alt="mv">
+										<span class="f1_sp1">菲诗小铺水润触感唇膏<p class="f1_sp2">申请</p></span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="body_4">
+				<div class="b4_hd main">
+					<a href="">
+						<img src="images/11.jpg" width="960" height="120" alt="舒淇">
+					</a>
+				</div>
+			</div>
+			<div class="body_5 main clear">
+				<div class="b5_l fl">
+					<h3 class="b5_l_h1">
+						<a href="" class="b5_l_a1"></a>
+						<span class="b5_l_sp1">
+							<a href="">街拍</a>
+							<a href="">街拍</a>
+							<a href="">街拍</a>
+						</span>
+					</h3>
+					<div class="b5_con1">
+						<a href="" class="con1_a1">
+							<img src="images/13.jpg">
+							<span class="con1_p1">唐嫣杨幂气场开挂 大衣当道时髦</span>
+						</a>
+						<a href="" class="con_a2"></a>
+						<a href="" class="con_a2"></a>
+					</div>
+					<ul class="b5_con2">
+						<li>
+							<a href="">
+								<img src="images/14.jpg">
+								<span class="con2_sp">奇思妙想的时装新浪潮</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img src="images/14.jpg">
+								<span class="con2_sp">奇思妙想的时装新浪潮</span>
+							</a>
+						</li>
+						<li class="con_l1">
+							<a href="">
+								<img src="images/15.jpg">
+								<span class="con2_sp">简单又舒适的切尔西靴</span>
+							</a>
+						</li>
+						<li class="con_l1">
+							<a href="">
+								<img src="images/15.jpg">
+								<span class="con2_sp">简单又舒适的切尔西靴</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="b5_r fr">
+					<div class="b5_r_hd">
+						<div class="hd1">
+							<div class="hd1_1">
+								<a href="" class="a1 hd1_1_a1">一天一LOOK </a>
+								<a href="" class="a1 hd1_1_a2"> 猫眼眼镜</a>
+								<a href="" class="hd1_1_a3">03<p>MAR</p></a>
+								<img src="images/16.jpg">
+							</div>
+							<div class="hd1_1">
+								<a href="" class="a1 hd1_1_a1">今日星范 </a>
+								<a href="" class="a1 hd1_1_a2"> 王鸥</a>		
+								<img src="images/16.jpg">
+							</div>
+							<span class="hd1_2 prev fl"></span>
+							<span class="hd1_2 next fr"></span>
+						</div>
+						<dl class="hd2">
+							<dt class="hd2_dt">
+								<img src="images/17.jpg">
+								<strong>
+									<a href="" class="hd2_a1">他们都太会讲故事了</a>
+								</strong>
+							</dt>
+							<dd class="hd2_dd">
+								在小编看来米兰时装周上的设计师们都是讲故事的高手。
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<div class="body_4 ">
+				<div class="b4_hd main">
+					<a href="">
+						<img src="images/12.jpg" width="960" height="120" alt="舒淇">
+					</a>
+				</div>
+			</div>
+			<div class="body_6 main clear">
+				<div class="b6_l fl clear">
+					<div class="b6_l_hd">
+
+						<a href="" class="l_a1"></a>						
+						<span class="l_sp1">
+							<a href="http://www.mcchina.com/beauty/tips/" title="眼线技巧" target="_blank">眼线技巧</a>
+							<a href="http://app.mcchina.com/tags.php?tag=美白" title="美白" target="_blank">美白</a>
+							<a href="http://app.mcchina.com/tags.php?tag=控油" title="控油" target="_blank">控油</a>
+							<a href="http://app.mcchina.com/tags.php?tag=痘痘肌" title="痘痘肌" target="_blank">痘痘肌</a>
+						</span>
+					</div>
+					<div class="b6_l_l fl">
+						<a href="" class="l_l_a1" >
+							<img src="images/18.jpg">
+							<span class="l_l_sp1">好皮肤真的能洗出来</span>
+							
+						</a>
+						<a href="" class="left next"></a>
+						<a href="" class="right next"></a>
+
+					</div>
+					<div class="b6_l_r fr">
+						<ul class="l_r_ul clear">
+							<li class="l_r_li fl">
+								<a href="">
+									<img src="images/1.png">
+									<a href="" class="l_r_a1"></a>
+								</a>
+								<em>围观时装周妆容</em>
+								<a href="" class="icon"></a>
+							</li>
+							<li class="l_r_li fl">
+								<a href="">
+									<img src="images/1.png">
+									<a href="" class="l_r_a1"></a>
+								</a>
+								<em>围观时装周妆容</em>
+								<a href="" class="icon"></a>
+							</li>
+						</ul>
+						<div class="b6_l_bt">
+							<a href="">
+								<img src="images/a1.jpg">
+								<a href="" class="l_r_a1"></a>
+							</a>
+							<em>【Miss B妆腔作势】欧美系vs日韩系，买粉底我该怎么选？</em>
+							<a href="" class="icon"></a>
+						</div>
+					</div>
+					<ul class="b6_l_bb">
+						<li class="fl">
+							<a href="">[护肤] 辣妈昆凌有了二胎</a>
+						</li>
+						<li class="bb_li fl">
+							<a href="">[护肤] 辣妈昆凌有了二胎</a>
+						</li>
+						<li class="fl">
+							<a href="">[护肤] 辣妈昆凌有了二胎</a>
+						</li>
+						<li class="bb_li fl">
+							<a href="">[护肤] 辣妈昆凌有了二胎</a>
+						</li>
+					</ul>
+				</div>
+				<div class="b6_r fr">
+					<div class="b6_r_t clear">
+						<span class="bt_sp fl">
+							
+						</span>
+						<span class="bt_sp fr">
+							
+						</span>
+						<div class="bt_t">
+							<img src="images/a2.jpg">
+							<a href="" class="bt_t_a">吃土也要买的妖艳小物！<span class="bt_t_sp">参与</span></a>
+						</div>
+					</div>
+					<div class="b6_r_b">
+						<div class="b_con1"></div>
+						<dl>
+							<dt class="first fl">
+								01
+							</dt>
+							<dd class="first">
+								<img src="images/a3.jpg">
+								<a href="">【猫太】晒晒美妆单品</a>
+							</dd>
+							<dt class="else">02</dt>
+							<dd class="else">
+								<a href="http://bbs.mcchina.com/blog-609602-415960.html">【lovebv】六款热门美白面膜评测</a>
+							</dd>
+							<dt class="else">03</dt>
+							<dd class="else">
+								<a href="http://bbs.mcchina.com/blog-609602-415960.html">【lovebv】六款热门美白面膜评测</a>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<div class="body_4 ">
+				<div class="b4_hd main">
+					<a href="">
+						<img src="images/a4.jpg" width="960" height="120" alt="舒淇">
+					</a>
+				</div>
+			</div>
+		</div>
+		<!--body end-->
+
+		<!--footer start-->
+		<div class="footer">
+			<div class="foot">
+				<div class="f_img main">
+					<a href="" class="a1">
+						<img src="images/a5.png">
+					</a>
+					<a href="" class="a2">
+						<img src="images/a6.png">
+					</a>
+					<a href="" class="a3">
+						<img src="images/a7.jpg">
+					</a>
+					<a href="" class="a4">
+						<img src="images/a8.jpg">
+					</a>
+					<a href="" class="a5">
+						<img src="images/a9.jpg">
+					</a>
+				</div>
+				<div class="f_mdl">
+					<div class="mdl_main">
+						<strong>集 团 网 站:</strong>
+						<a href="">ELLESHOP</a>
+						<a href="">ELLE中文网</a>
+						<a href="">ELLEMEN</a>
+						<a href="">名车志</a>
+						<a href="">伊周</a>
+						<a href="">赫斯特中国</a>
+						<a href="">华道发行</a> <br />
+
+						<strong>嘉人全球网站:</strong>
+						<a href="">法国</a>
+						<a href="">美国</a>
+						<a href="">英国</a>
+						<a href="">巴西</a>
+						<a href="">西班牙</a>
+						<a href="">香港</a>
+						<a href="">马来西亚</a>
+						<a href="">台湾</a>
+						<a href="">土耳其</a>
+						<a href="">意大利</a>
+						<a href="">澳大利亚</a>
+						<a href="">荷兰</a>
+						<a href="">日本</a>
+					</div>
+				</div>
+				<div class="f_bt">
+				</div>
+				<div class="f_bb">
+					<a href="">杂志订阅</a>
+					<a href="">杂志订阅</a>
+					<a href="">杂志订阅</a>
+					<a href="">杂志订阅</a>
+					<a href="">杂志订阅</a>
+					<a href="">杂志订阅</a>
+					<a href="">杂志订阅</a>
+					<a href="">杂志订阅</a>
+					<a href="">杂志订阅</a>
+					<a href="">杂志订阅</a>
+				</div>
+				<p>Copyright © 2017 mcchina.com All rights reserved.<br /> 北京必尔得广告有限公司 版权所有 京ICP证060525号
+					<a href="">京ICP备08009511号-1</a>
+					<a href=""><img src="images/ghs.png" /></a>
+					<a href="">京公网安备11010502030367号</a>
+				</p>
+			</div>
+		</div>
+		<!--footer end-->
+	</div>
+
+
+</body>
+</html>
